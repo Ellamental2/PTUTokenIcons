@@ -1,21 +1,22 @@
-.control-icon.chalkicon {
+.control-icon.chalk-icon {
 	width: fit-content;
 	min-width: 42px;
 	flex-basis: auto;
 	padding: 0 8px;
-    margin: 8px 15px 8px 0;
+    margin: 8px 15px 8px 0 !important;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#token-hud .attribute.elevation {
-	width: 42px;
-	flex: 0 0 42px;
+.control-icon.chalk-icon > * {
+    margin-right: 5px;
 }
 
-.chalkdiv {
+.chalk-container {
 	display: flex; 
 	flex-direction: row; 
 	justify-content: flex-end; 
-	align-items:center; 
-	margin-right: 75px;
+	align-items:center;
 	flex: 0 !important;
 }

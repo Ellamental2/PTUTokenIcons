@@ -1,114 +1,36 @@
-class TokenInfoIcons {
+Hooks.on('renderTokenHUD', _addMovementIcons);
 
-    static async addOverlandButton(app, html, data) {
-        
-        let actor = game.actors.get(data.actorId);
-        if (actor === undefined)
-            return;
+function _addMovementIcons(app, html, data) {
+    // Fetch Actor
+    const actor = game.actors.get(data.actorId);
+    if(actor === undefined) return;
 
-	let overland = actor.data.data.capabilities.Overland;
-        
-        if (overland == 0)
-            return;
-
-        let newdiv = '<div class ="chalkdiv">';
-
-        let obutton = '<div class ="control-icon chalkicon" title = "Overland: ' + overland + '"><i class ="fas fa-shoe-prints"></i> ' + overland + '</div>';
-
-        html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(obutton);
+    // Ownership of actor does not need to be checked; token HUD only shows if you have control of said token.
+    
+    // List of capabilities to possibly display, and the icon it should use
+    const capabilitiesMap = {
+        Overland: "fas fa-shoe-prints",
+        Swim: "fas fa-swimmer",
+        Burrow: "fas fa-shovel",
+        Sky: "fas fa-feather",
+        Levitate: "fab fa-fly",
     }
 
-    static async addSkyButton(app, html, data) {
+    const buttons = [];
+    for(const [cap,fac] of Object.entries(capabilitiesMap)) {
+        const val = actor.data.data.capabilities[cap];
+        // If value is 0 / unset no need to display.
+        if(!val) continue;
         
-        let actor = game.actors.get(data.actorId);
-        if (actor === undefined)
-            return;
-        
-        let sky = actor.data.data.capabilities.Sky;
-
-        if (sky == 0)
-            return;
-
-        let newdiv = '<div class ="chalkdiv">';
-
-        let sbutton = $('<div class ="control-icon chalkicon" title = "Sky: ' + sky + '"><i class="fas fa-feather"></i> ' + sky + '</div>');
-
-        html.find('.attribute.target').wrap(newdiv);
-        html.find('.attribute.target').before(sbutton);
+        buttons.push(`<div class="control-icon chalk-icon" title="${cap}: ${val}"><i class="${fac}"></i>${val}</div>`)
     }
 
-    static async addSwimButton(app, html, data) {
-        
-        let actor = game.actors.get(data.actorId);
-        if (actor === undefined)
-            return;
-        
-        let swim = actor.data.data.capabilities.Swim;
+    html.find(".col.middle").before( // if the actor uses a 2nd bar increase height.
+        `<div class="col middle" style="top: -${html.find(".bar2").html().trim() ? 105 : 90}px;">
+            <div class="chalk-container">
+                ${buttons.join("\n")}
+            </div>
+        </div>`
+    )
 
-        if (swim == 0)
-            return;
-
-        let newdiv = '<div class ="chalkdiv">';
-
-        let swbutton = $('<div class ="control-icon chalkicon" title = "Swim: ' + swim + '"><i class="fas fa-swimmer"></i> ' + swim + '</div>');
-
-        html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(swbutton);
-    }
-
-    static async addBurrowButton(app, html, data) {
-        
-        let actor = game.actors.get(data.actorId);
-        if (actor === undefined)
-            return;
-        
-        let burrow = actor.data.data.capabilities.Burrow;
-
-        if (burrow == 0)
-            return;
-
-        let newdiv = '<div class ="chalkdiv">';
-
-        let bbutton = $('<div class ="control-icon chalkicon" title = "Burrow: ' + burrow + '"><i class="fas fa-shovel"></i> ' + burrow + '</div>');
-
-        html.find('.control-icon.config').wrap(newdiv);
-        html.find('.control-icon.config').before(bbutton);
-    }
-
-    static async addLevitateButton(app, html, data) {
-        
-        let actor = game.actors.get(data.actorId);
-        if (actor === undefined)
-            return;
-        
-        let lev = actor.data.data.capabilities.Levitate;
-
-        if (lev == 0)
-            return;
-
-        let newdiv = '<div class ="chalkdiv">';
-
-        let lbutton = $('<div class ="control-icon chalkicon" title = "Levitate: ' + lev + '"><i class="fas fa-fly"></i> ' + lev + '</div>');
-
-        html.find('.attribute.target').wrap(newdiv);
-        html.find('.attribute.target').before(lbutton);
-    }
 }
-Hooks.on('ready', () => {
-    if (game.user.isGM) { //maybe change this to if (game.user.isGM || game.user.isOwner)
-                
-        //Swim
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addSwimButton(app, html, data) });
-        //Burrow
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addBurrowButton(app, html, data) });
-        //Levitate
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addLevitateButton(app, html, data) });
-        //Sky
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addSkyButton(app, html, data) });
-        //Overland
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addOverlandButton(app, html, data) });
-    }
-	
-});
-console.log("Token Info Icons loaded");
