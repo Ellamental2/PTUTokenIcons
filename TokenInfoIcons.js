@@ -32,7 +32,7 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let sbutton = '<div class ="control-icon chalkicon" title = "Sky: ' + sky + '"><i class="fas fa-feather"></i> ' + sky + '</div>';
+        let sbutton = $('<div class ="control-icon chalkicon" title = "Sky: ' + sky + '"><i class="fas fa-feather"></i> ' + sky + '</div>');
 
         html.find('.attribute.target').wrap(newdiv);
         html.find('.attribute.target').before(sbutton);
@@ -51,10 +51,10 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let sbutton = '<div class ="control-icon chalkicon" title = "Swim: ' + swim + '"><i class="fas fa-swimmer"></i> ' + swim + '</div>';
+        let swbutton = $('<div class ="control-icon chalkicon" title = "Swim: ' + swim + '"><i class="fas fa-swimmer"></i> ' + swim + '</div>');
 
         html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(sbutton);
+        html.find('.attribute.elevation').before(swbutton);
     }
 
     static async addBurrowButton(app, html, data) {
@@ -70,10 +70,10 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let bbutton = '<div class ="control-icon chalkicon" title = "Burrow: ' + burrow + '"><i class="fas fa-shovel"></i> ' + burrow + '</div>';
+        let bbutton = $('<div class ="control-icon chalkicon" title = "Burrow: ' + burrow + '"><i class="fas fa-shovel"></i> ' + burrow + '</div>');
 
-        html.find('.control-icon.target').wrap(newdiv);
-        html.find('.control-icon.target').before(bbutton);
+        html.find('.control-icon.config').wrap(newdiv);
+        html.find('.control-icon.config').before(bbutton);
     }
 
     static async addLevitateButton(app, html, data) {
@@ -89,7 +89,7 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let lbutton = '<div class ="control-icon chalkicon" title = "Levitate: ' + lev + '"><i class="fas fa-fly"></i> ' + lev + '</div>';
+        let lbutton = $('<div class ="control-icon chalkicon" title = "Levitate: ' + lev + '"><i class="fas fa-fly"></i> ' + lev + '</div>');
 
         html.find('.attribute.target').wrap(newdiv);
         html.find('.attribute.target').before(lbutton);
