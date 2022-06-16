@@ -9,7 +9,7 @@
             "name": "ptu",
             "type": "system",
             "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
-            "version": "2.0-Beta-6"
+            "version": "2.0-Beta-7"
         }
     ],
     "relationships": {
@@ -20,7 +20,7 @@
                 "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
                 "compatibility": {
                     "minimum": "2.0-Beta-6",
-                    "compatible": "2.0-Beta-6"
+                    "compatible": "2.0-Beta-7"
                 }
             }
         ]
