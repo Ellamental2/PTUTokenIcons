@@ -5,11 +5,13 @@ class TokenInfoIcons {
         let actor = game.actors.get(data.actorId);
         if (actor === undefined)
             return;
+
+        let overland = actor.data.capabilities.Overland.value;
         
         if (overland == 0)
             return;
 
-        let overland = actor.adata.capabilities.Overland.value;
+
         let newdiv = '<div class ="chalkdiv">';
 
         let obutton = '<div class ="control-icon chalkicon" title = "Overland: ' + overland + '"><i class ="fas fa-shoeprintes"></i> ' + overland + '</div>';
@@ -24,7 +26,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let sky = actor.adata.capabilities.Sky.value;
+        let sky = actor.data.capabilities.Sky.value;
 
         if (sky == 0)
             return;
@@ -43,7 +45,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let swim = actor.adata.capabilities.Swim.value;
+        let swim = actor.data.capabilities.Swim.value;
 
         if (swim == 0)
             return;
@@ -62,7 +64,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let burrow = actor.adata.capabilities.Burrow.value;
+        let burrow = actor.data.capabilities.Burrow.value;
 
         if (burrow == 0)
             return;
@@ -81,7 +83,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let lev = actor.adata.capabilities.Levitate.value;
+        let lev = actor.data.capabilities.Levitate.value;
 
         if (lev == 0)
             return;
