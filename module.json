@@ -6,12 +6,25 @@
 	"compatibleCoreVersion": "9.268",
     "dependencies": [
         {
-            "name": "Pokemon Tabletop United",
+            "name": "ptu",
             "type": "system",
             "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
             "version": "2.0-Beta-6"
         }
     ],
+    "relationships": {
+        "requires": [
+            {
+                "id": "ptu",
+                "type": "system",
+                "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
+                "compatibility": {
+                    "minimum": "2.0-Beta-6",
+                    "compatible": "2.0-Beta-6"
+                }
+            }
+        ]
+      },
     "authors": [
         {
             "name": "Jan Ole Peek (ChalkOne)"

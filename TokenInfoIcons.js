@@ -11,7 +11,7 @@ function _addMovementIcons(app, html, data) {
     const capabilitiesMap = {
         Overland: "fas fa-shoe-prints",
         Swim: "fas fa-swimmer",
-        Burrow: "fas fa-shovel",
+        Burrow: "fas fa-mountain",
         Sky: "fas fa-feather",
         Levitate: "fab fa-fly",
     }
