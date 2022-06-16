@@ -6,5 +6,8 @@
     "author": "Ellamental",
     "systems": "Pokemon TableTop United",
     "scripts": ["/TokenInfoIcons.js"],
-    "styles": ["/css/token-info-icons.css"]
+    "styles": ["/css/token-info-icons.css"],
+    "url": "",
+	"manifest": "",
+	"download": ""
 }
