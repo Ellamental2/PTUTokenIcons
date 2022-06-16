@@ -13,7 +13,7 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let obutton = '<div class ="control-icon chalkicon" title = "Overland: ' + overland + '"><i class ="fas fa-shoeprintes"></i> ' + overland + '</div>';
+        let obutton = '<div class ="control-icon chalkicon" title = "Overland: ' + overland + '"><i class ="fas fa-shoe-prints"></i> ' + overland + '</div>';
 
         html.find('.attribute.elevation').wrap(newdiv);
         html.find('.attribute.elevation').before(obutton);
@@ -32,10 +32,10 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let sbutton = '<div class ="control-icon chalkicon" title = "Sky: ' + sky + '"><i class="fa-solid fa-dove"></i> ' + sky + '</div>';
+        let sbutton = '<div class ="control-icon chalkicon" title = "Sky: ' + sky + '"><i class="fas fa-feather"></i> ' + sky + '</div>';
 
-        html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(sbutton);
+        html.find('.attribute.target').wrap(newdiv);
+        html.find('.attribute.target').before(sbutton);
     }
 
     static async addSwimButton(app, html, data) {
@@ -51,7 +51,7 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let sbutton = '<div class ="control-icon chalkicon" title = "Swim: ' + swim + '"><i class="fa-solid fa-person-swimming"></i> ' + swim + '</div>';
+        let sbutton = '<div class ="control-icon chalkicon" title = "Swim: ' + swim + '"><i class="fas fa-swimmer"></i> ' + swim + '</div>';
 
         html.find('.attribute.elevation').wrap(newdiv);
         html.find('.attribute.elevation').before(sbutton);
@@ -70,10 +70,10 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let bbutton = '<div class ="control-icon chalkicon" title = "Burrow: ' + burrow + '"><i class="fa-solid fa-shovel"></i> ' + burrow + '</div>';
+        let bbutton = '<div class ="control-icon chalkicon" title = "Burrow: ' + burrow + '"><i class="fas fa-shovel"></i> ' + burrow + '</div>';
 
-        html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(bbutton);
+        html.find('.control-icon.target').wrap(newdiv);
+        html.find('.control-icon.target').before(bbutton);
     }
 
     static async addLevitateButton(app, html, data) {
@@ -89,24 +89,25 @@ class TokenInfoIcons {
 
         let newdiv = '<div class ="chalkdiv">';
 
-        let lbutton = '<div class ="control-icon chalkicon" title = "Levitate: ' + lev + '"><i class="fa-brands fa-fly"></i> ' + lev + '</div>';
+        let lbutton = '<div class ="control-icon chalkicon" title = "Levitate: ' + lev + '"><i class="fas fa-fly"></i> ' + lev + '</div>';
 
-        html.find('.attribute.elevation').wrap(newdiv);
-        html.find('.attribute.elevation').before(lbutton);
+        html.find('.attribute.target').wrap(newdiv);
+        html.find('.attribute.target').before(lbutton);
     }
 }
 Hooks.on('ready', () => {
     if (game.user.isGM) { //maybe change this to if (game.user.isGM || game.user.isOwner)
-        //Overland
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addOverlandButton(app, html, data) });
-        //Sky
-        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addSkyButton(app, html, data) });
+                
         //Swim
         Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addSwimButton(app, html, data) });
         //Burrow
         Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addBurrowButton(app, html, data) });
         //Levitate
         Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addLevitateButton(app, html, data) });
+        //Sky
+        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addSkyButton(app, html, data) });
+        //Overland
+        Hooks.on('renderTokenHUD', (app, html, data) => { TokenInfoIcons.addOverlandButton(app, html, data) });
     }
 	
 });
