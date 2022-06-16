@@ -7,7 +7,7 @@
     "systems": "Pokemon TableTop United",
     "scripts": ["/TokenInfoIcons.js"],
     "styles": ["/css/token-info-icons.css"],
-    "url": "",
+    "url": "https://github.com/Ellamental2/PTUTokenIcons",
 	"manifest": "",
-	"download": ""
+	"download": "https://github.com/Ellamental2/PTUTokenIcons/archive/refs/heads/master.zip"
 }
