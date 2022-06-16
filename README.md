@@ -7,9 +7,9 @@ this adds valid movement capabilities as labels on the actors of pokemon
 Manifest Link : https://github.com/Ellamental2/PTUTokenIcons/raw/master/module.json
 
 ### Examples:
-![demo_charizard] (https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-charizard.png)
-![demo_sandile] (https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-sandile.png)
-![yamask] (https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-yamask.png)
+![demo_charizard](https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-charizard.jpg)
+![demo_sandile](https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-sandile.jpg)
+![demo_yamask](https://github.com/Ellamental2/PTUTokenIcons/tree/master/images/example-yamask.jpg)
 
 ### Installation Instructions
 
