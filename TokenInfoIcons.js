@@ -6,11 +6,10 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
 
-        let overland = actor.data.capabilities.Overland.value;
+	let overland = actor.data.data.capabilities.Overland;
         
         if (overland == 0)
             return;
-
 
         let newdiv = '<div class ="chalkdiv">';
 
@@ -26,7 +25,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let sky = actor.data.capabilities.Sky.value;
+        let sky = actor.data.data.capabilities.Sky;
 
         if (sky == 0)
             return;
@@ -45,7 +44,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let swim = actor.data.capabilities.Swim.value;
+        let swim = actor.data.data.capabilities.Swim;
 
         if (swim == 0)
             return;
@@ -64,7 +63,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let burrow = actor.data.capabilities.Burrow.value;
+        let burrow = actor.data.data.capabilities.Burrow;
 
         if (burrow == 0)
             return;
@@ -83,7 +82,7 @@ class TokenInfoIcons {
         if (actor === undefined)
             return;
         
-        let lev = actor.data.capabilities.Levitate.value;
+        let lev = actor.data.data.capabilities.Levitate;
 
         if (lev == 0)
             return;
