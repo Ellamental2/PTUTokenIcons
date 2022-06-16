@@ -3,13 +3,13 @@
     "title": "Movement Info Icons for PTU",
     "description": "This module is based on the fvtt---token-info-icons by Jan Ole Peek (ChalkOne) to give movement Icons on actors within PTU - original module at https://github.com/jopeek/fvtt-token-info-icons",
     "version": "1.0.3",
-    "minimumCoreVersion": "0.4.4",
 	"compatibleCoreVersion": "9.268",
     "dependencies": [
         {
             "name": "Pokemon Tabletop United",
             "type": "system",
-            "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/releases/latest/download/system.json"
+            "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/releases/latest/download/system.json",
+            "version": "2.0-Beta-6"
         }
     ],
     "authors": [
