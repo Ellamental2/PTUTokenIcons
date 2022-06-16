@@ -11,16 +11,6 @@
 	flex: 0 0 42px;
 }
 
-#token-hud .attribute.target{
-	width: 42px;
-	flex: 0 0 42px;
-}
-
-#token-hud .attribute.config{
-	width: 42px;
-	flex: 0 0 42px;
-}
-
 .chalkdiv {
 	display: flex; 
 	flex-direction: row; 
