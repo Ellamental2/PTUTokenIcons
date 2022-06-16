@@ -9,7 +9,7 @@
         {
             "name": "Pokemon Tabletop United",
             "type": "system",
-            "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/releases/latest/download/system.json",
+            "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/releases/latest/download/system.json"
         }
     ],
     "authors": [
