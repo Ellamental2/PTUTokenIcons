@@ -14,7 +14,7 @@ function _addMovementIcons(app, html, data) {
         Burrow: "fas fa-mountain",
         Sky: "fas fa-feather",
         Levitate: "fab fa-fly",
-        Teleporter: "fas fa-people=arrows",
+        Teleporter: "fas fa-people-arrows",
     }
 
     const buttons = [];
