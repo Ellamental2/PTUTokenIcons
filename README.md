@@ -23,3 +23,10 @@ To install a module, follow these instructions:
 ### Feedback
 
 If you have any suggestions or feedback, you can find me on the PTU discord server: https://discord.gg/ZTFfKYDxZf
+
+### Patch Notes
+
+#### 1.1.1 Teleporter Update
+Added a Teleporter icon for pokemon who know the move Teleport
+
+![image](https://user-images.githubusercontent.com/43385250/178348012-49123af6-0358-4662-8a58-b1f956c77982.png)
