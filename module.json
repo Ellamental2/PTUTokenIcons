@@ -2,7 +2,7 @@
     "name": "ptu-movement-info",
     "title": "Movement Info Icons for PTU",
     "description": "This module is based on the fvtt---token-info-icons by Jan Ole Peek (ChalkOne) to give movement Icons on actors within PTU - original module at https://github.com/jopeek/fvtt-token-info-icons",
-    "version": "1.1.0",
+    "version": "1.1.1",
 	"compatibleCoreVersion": "9.268",
     "dependencies": [
         {
@@ -24,7 +24,7 @@
                 }
             }
         ]
-      },
+    },
     "authors": [
         {
             "name": "Jan Ole Peek (ChalkOne)"
