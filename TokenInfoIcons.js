@@ -19,7 +19,7 @@ function _addMovementIcons(app, html, data) {
 
     const buttons = [];
     for(const [cap,fac] of Object.entries(capabilitiesMap)) {
-        const val = actor.data.data.capabilities[cap];
+        const val = actor.system.capabilities[cap];
         // If value is 0 / unset no need to display.
         if(!val) continue;
         
